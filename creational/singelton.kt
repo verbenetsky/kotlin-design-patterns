@@ -7,8 +7,7 @@ object DatabaseManager {
     init {
         println("initialising: $this")
     }
-    @Synchronized // also a good practice is to add @Synchronized to make sure that only one thread can
-    // modify connection state
+    
     fun connectToDb() {
         if (connectionInitialized) {
             println("connected to db")
@@ -17,7 +16,7 @@ object DatabaseManager {
             connectionInitialized = true
         }
     }
-    @Synchronized
+    
     fun disconnect() {
         if (connectionInitialized) {
             println("disconnecting from db...")
