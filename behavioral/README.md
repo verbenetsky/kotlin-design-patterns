@@ -47,10 +47,6 @@ This creates tight coupling between `Game` and specific announcer classes.
 
 In this version, `Game` is responsible not only for managing the score, but also for directly calling specific reaction classes. That makes the design less reusable and less maintainable.
 
-### Conclusion
-
-This is a bad example because the subject depends on concrete implementations instead of an abstraction.
-
 ---
 
 ## Good Example
