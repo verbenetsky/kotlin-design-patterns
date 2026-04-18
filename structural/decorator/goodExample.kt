@@ -15,6 +15,7 @@ class ConsoleLogger : Logger {
 
 abstract class LoggerDecorator(protected val logger: Logger) : Logger
 
+// decorator
 class UniqueIdLogger(logger: Logger) : LoggerDecorator(logger) {
     override fun log(message: String) {
         logger.log("${UUID.randomUUID()} $message")
